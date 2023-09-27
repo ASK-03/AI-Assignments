@@ -1,0 +1,27 @@
+Greedy Best First Search:
+
+	Greedy Best First Search is a heuristic-based search algorithm that explores nodes based on their heuristic values, prioritizing nodes that are closer to the goal.
+
+A* Search:
+
+	A* is an informed search algorithm that combines the cost of reaching a node from the start (g(n)) and a heuristic function (h(n)) to estimate the cost to reach the goal. It explores nodes with the
+	lowest sum of g(n) and h(n).
+	
+	
+Converting the problem into search problem:
+	
+	State Space: The state space represents all possible configurations the drone can be in during its navigation. In this case, each state is a cell in the 8x8 grid, denoted by its coordinates (x, y).
+
+	Initial State: The initial state is the starting point of the drone, which is (1, 1) in this case.
+
+	Goal State: The goal state is the delivery destination, which is (7, 7) in this case.
+
+	Actions: The actions represent the possible movements the drone can make from one state to another. In this case, the drone can move vertically or horizontally to adjacent grid cells, provided there is
+	no obstacle (#) in the target cell.
+
+	Transition Model: The transition model defines how the drone's state changes based on the actions taken. Moving from one cell to another is a transition, and the new state will be the cell the drone
+	moves to.
+
+	Cost Function: The cost function assigns a cost to each action. In this case, we will assume a cost of 1 for each movement (i.e. time taken).
+
+	Heuristic Function: The heuristic function estimates the cost from the current state to the goal state. We'll use the Manhattan distance.
